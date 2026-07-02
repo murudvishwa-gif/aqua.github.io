@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | DeepCurrent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-dashboard page-admin-dashboard">
+<header id="site-header" class="scrolled dashboard-header">
+  <button class="dashboard-menu-btn" type="button" aria-label="Toggle dashboard menu" aria-expanded="false" aria-controls="dashboard-nav">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="logo dashboard-logo-home" href="#admin-home" aria-label="Admin dashboard home"><img src="assets/image/pic1.webp" alt="Logo"></a>
+  <nav id="dashboard-nav" class="dashboard-nav">
+    <div class="dashboard-sidebar-user">
+      <span class="dashboard-user-avatar" data-dashboard-initials>AD</span>
+      <div>
+        <strong data-dashboard-user>Admin</strong>
+        <span data-dashboard-role>Admin</span>
+      </div>
+    </div>
+    <ul>
+      <li><a href="#admin-home">Admin Home</a></li>
+      <li><a href="#admin-overview">Overview</a></li>
+      <li><a href="#admin-users">Users</a></li>
+      <li><a href="#admin-farms">Farms</a></li>
+      <li><a href="#admin-devices">Devices</a></li>
+      <li><a href="#admin-reports">Reports</a></li>
+      <li><a href="#admin-support">Support</a></li>
+      <li><a href="#admin-profile">Profile</a></li>
+      <li><a class="dashboard-logout-link" href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+  <div class="dashboard-actions">
+    <a class="dashboard-icon-btn notification-btn" href="#admin-support" aria-label="Notifications">
+      <span class="notification-mark">5</span>
+    </a>
+    <a class="dashboard-icon-btn profile-btn" href="#admin-profile" aria-label="Profile" data-dashboard-initials>AD</a>
+  </div>
+</header>
+
+<section id="admin-home" class="dashboard-shell dashboard-panel active">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Admin dashboard</span>
+      <h2>Welcome, <span data-dashboard-user>Admin</span></h2>
+      <p class="lead">Monitor users, farms, devices, reports, and support requests from one control screen.</p>
+      <span class="dashboard-weather">Admin access - Live system</span>
+    </div>
+    <div class="dashboard-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">Active users</span><strong>248</strong><p>31 admins and 217 farm users.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Managed farms</span><strong>64</strong><p>Across 8 operating regions.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Open tickets</span><strong>5</strong><p>Two high-priority support cases.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Device uptime</span><strong>98.7%</strong><p>Network health is stable today.</p></div>
+    </div>
+    <div class="dash-panel dashboard-home-panel reveal">
+      <div>
+        <span class="eyebrow">Admin shortcuts</span>
+        <h3>Open a management section</h3>
+        <p>Review platform activity, approve users, inspect device health, and respond to support requests.</p>
+      </div>
+      <div class="dashboard-quick-actions">
+        <a href="#admin-users">Users</a>
+        <a href="#admin-farms">Farms</a>
+        <a href="#admin-devices">Devices</a>
+        <a href="#admin-support">Support</a>
+        <a href="#admin-reports">Reports</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admin-overview" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Platform overview</span>
+      <h2>Today across all accounts.</h2>
+    </div>
+    <div class="dashboard-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">New signups</span><strong>18</strong><p>Seven awaiting admin review.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Sensor alerts</span><strong>42</strong><p>36 resolved automatically.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Revenue pipeline</span><strong>₹8.4L</strong><p>Monthly plans and device kits.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Reports sent</span><strong>91</strong><p>Weekly summaries delivered.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="admin-users" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">User management</span>
+      <h2>Accounts needing attention.</h2>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>Riya Farms requested admin access.</span><span>Review</span></div>
+        <div class="dashboard-alert"><span>7 new user accounts waiting for approval.</span><span>Pending</span></div>
+        <div class="dashboard-alert"><span>3 inactive users have not logged in for 30 days.</span><span>Audit</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admin-farms" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Farm operations</span>
+      <h2>Managed farm status.</h2>
+    </div>
+    <div class="dashboard-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">Online farms</span><strong>61/64</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Critical alerts</span><strong>2</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Install visits</span><strong>6</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Renewals due</span><strong>9</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="admin-devices" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Device fleet</span>
+      <h2>Hardware across all sites.</h2>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>1,284 sensors reporting normally.</span><span>OK</span></div>
+        <div class="dashboard-alert"><span>12 devices need firmware updates.</span><span>Update</span></div>
+        <div class="dashboard-alert"><span>4 cameras offline in coastal sites.</span><span>Check</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admin-reports" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Reports</span>
+      <h2>Business and operations summary.</h2>
+    </div>
+    <div class="dashboard-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">Monthly growth</span><strong>14%</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Support SLA</span><strong>96%</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Avg uptime</span><strong>98.7%</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Exports ready</span><strong>12</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="admin-support" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Support desk</span>
+      <h2>Open customer requests.</h2>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>Loan guidance request from Delhi Office queue.</span><span>New</span></div>
+        <div class="dashboard-alert"><span>Dashboard access issue for Mumbai Farm 12.</span><span>Urgent</span></div>
+        <div class="dashboard-alert"><span>Property visit booking needs assignment.</span><span>Assign</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admin-profile" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Admin profile</span>
+      <h2>Account permissions.</h2>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>Name</span><span data-dashboard-user>Admin</span></div>
+        <div class="dashboard-alert"><span>Role</span><span data-dashboard-role>Admin</span></div>
+        <div class="dashboard-alert"><span>Access</span><span>Full platform management</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="scripts.js" defer></script>
+</body>
+</html>

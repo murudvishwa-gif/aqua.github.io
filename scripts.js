@@ -28,9 +28,10 @@ document.querySelectorAll('.page-login .hero-card form, .page-signup .hero-card 
     const roleInput = form.querySelector('select[name="accountRole"]');
     const fallbackName = emailInput ? emailInput.value.split('@')[0].replace(/[._-]+/g, ' ') : '';
     const displayName = (nameInput && nameInput.value.trim()) || fallbackName || 'Farm Operator';
+    const dashboardRole = roleInput ? roleInput.value : 'User';
     localStorage.setItem('dashboardUserName', displayName.trim());
-    localStorage.setItem('dashboardUserRole', roleInput ? roleInput.value : 'User');
-    window.location.href = 'dashboard.html';
+    localStorage.setItem('dashboardUserRole', dashboardRole);
+    window.location.href = dashboardRole === 'Admin' ? 'admin-dashboard.html' : 'dashboard.html';
   });
 });
 const dashboardMenuBtn = document.querySelector('.dashboard-menu-btn');
@@ -45,6 +46,7 @@ if(dashboardMenuBtn && dashboardHeader){
     .join('') || 'VP';
   document.querySelectorAll('[data-dashboard-user]').forEach(el => { el.textContent = storedUserName; });
   document.querySelectorAll('[data-dashboard-initials]').forEach(el => { el.textContent = initials; });
+  document.querySelectorAll('[data-dashboard-role]').forEach(el => { el.textContent = localStorage.getItem('dashboardUserRole') || 'User'; });
   const dashboardPanels = document.querySelectorAll('.dashboard-panel');
   const dashboardLinks = document.querySelectorAll('.dashboard-logo-home[href^="#"], .dashboard-nav a[href^="#"], .dashboard-actions a[href^="#"], .dashboard-panel a[href^="#"]');
   const showDashboardPanel = (id) => {
