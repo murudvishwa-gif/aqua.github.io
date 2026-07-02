@@ -25,9 +25,11 @@ document.querySelectorAll('.page-login .hero-card form, .page-signup .hero-card 
     if(document.body.classList.contains('page-login') && !form.querySelector('input[type="password"]')) return;
     const nameInput = form.querySelector('input[type="text"]');
     const emailInput = form.querySelector('input[type="email"]');
+    const roleInput = form.querySelector('select[name="accountRole"]');
     const fallbackName = emailInput ? emailInput.value.split('@')[0].replace(/[._-]+/g, ' ') : '';
     const displayName = (nameInput && nameInput.value.trim()) || fallbackName || 'Farm Operator';
     localStorage.setItem('dashboardUserName', displayName.trim());
+    localStorage.setItem('dashboardUserRole', roleInput ? roleInput.value : 'User');
     window.location.href = 'dashboard.html';
   });
 });

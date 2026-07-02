@@ -23,11 +23,12 @@
       <li><a href="products.html">Hardware</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="signup.html">Sign up</a></li>
     </ul>
   </nav>
-  <a href="contact.html" class="btn btn-ghost" style="padding:11px 20px;font-size:13.5px;">Book a demo</a>
+  <div class="header-actions">
+    <a href="login.html" class="header-login">Login</a>
+    <a href="signup.html" class="header-signup">Sign up</a>
+  </div>
 </header>
 <section id="hero">
   <div class="bubbles" id="bubbles-hero"></div>
@@ -46,6 +47,14 @@
       <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Logging in…';">
         <input type="email" placeholder="you@yourfarm.com" required>
         <input type="password" placeholder="Password" required>
+        <label class="account-type-field">
+          <span>Account Type</span>
+          <select name="accountRole" required>
+            <option value="" selected disabled>Select User or Admin</option>
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </label>
         <button type="submit" class="btn btn-primary" style="width:100%;">Sign in</button>
         <a class="auth-link" href="forgot-password.html">Forgot password?</a>
       </form>
