@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing & Impact — DeepCurrent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-pricing">
+<div id="depth-gauge">
+  <div class="dg-readout"><span class="m" id="dg-meters">0m</span><span class="z" id="dg-zone">Surface</span></div>
+  <div class="dg-track"><div class="dg-fill" id="dg-fill"></div></div>
+</div>
+<header id="site-header">
+  <button class="site-menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="logo"><img src="assets/image/pic1.webp" alt="Logo"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="products.html">Hardware</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+  </nav>
+  <a href="contact.html" class="btn btn-ghost" style="padding:11px 20px;font-size:13.5px;">Book a demo</a>
+</header>
+<section id="hero">
+  <div class="bubbles" id="bubbles-hero"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow hero-eyebrow">Plans for farms</span>
+      <h1 class="hero-title">Pricing built for growing operations.</h1>
+      <p class="hero-sub">Flexible plans for early pilots, full operations and multi-site deployments.</p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary">Talk to sales</a>
+        <a href="products.html" class="btn btn-ghost">View hardware</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="mono">Farm feed · Site 04, Vũng Tàu bay</span>
+      <div style="margin-top:16px;">
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Dissolved oxygen</span><span class="val">7.2 mg/L</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Water temp</span><span class="val">26.4 °C</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Feed conversion</span><span class="val">1.18 FCR</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Active sensors</span><span class="val">312 / 312</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="impact">
+  <div class="wrap">
+    <div class="tech-head reveal">
+      <span class="eyebrow section-tag">Impact</span>
+      <h2>Efficiency reads as sustainability.</h2>
+      <p class="lead">Less wasted feed and fewer emergency treatments mean a lighter footprint per kilo of fish.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card reveal r1">
+        <div class="ring-wrap"><svg viewBox="0 0 120 120"><circle class="ring-track" cx="60" cy="60" r="56"/><circle class="ring-fill" data-pct="76" cx="60" cy="60" r="56"/></svg><div class="ring-text">76%</div></div>
+        <h4>Farms cutting feed waste</h4><p>Share of connected sites reporting lower FCR within one growth cycle.</p>
+      </div>
+      <div class="impact-card reveal r2">
+        <div class="ring-wrap"><svg viewBox="0 0 120 120"><circle class="ring-track" cx="60" cy="60" r="56"/><circle class="ring-fill" data-pct="41" cx="60" cy="60" r="56"/></svg><div class="ring-text">41%</div></div>
+        <h4>Fewer emergency water changes</h4><p>Early alerts reduce the need for reactive, high-volume interventions.</p>
+      </div>
+      <div class="impact-card reveal r3">
+        <div class="ring-wrap"><svg viewBox="0 0 120 120"><circle class="ring-track" cx="60" cy="60" r="56"/><circle class="ring-fill" data-pct="88" cx="60" cy="60" r="56"/></svg><div class="ring-text">88%</div></div>
+        <h4>Stock loss events caught early</h4><p>Anomalies flagged before mortality reaches reportable thresholds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="cases">
+  <div class="wrap">
+    <div class="tech-head reveal">
+      <span class="eyebrow section-tag">From the water</span>
+      <h2>Farms running on DeepCurrent.</h2>
+    </div>
+    <div class="case-grid">
+      <div class="case-card reveal r1">
+        <p class="case-quote">We caught a low-oxygen night at 2am instead of finding out at feeding time. That single alert paid for the buoys.</p>
+        <div class="case-foot"><div class="case-avatar">MT</div><div><div class="case-name">Mai Tran</div><div class="case-role">Shrimp farm operator, Cà Mau</div></div></div>
+      </div>
+      <div class="case-card reveal r2">
+        <p class="case-quote">Feed cost dropped noticeably once the auto-feeders started responding to actual appetite instead of a fixed schedule.</p>
+        <div class="case-foot"><div class="case-avatar">JH</div><div><div class="case-name">Jonas Haugen</div><div class="case-role">Salmon site manager, Norway</div></div></div>
+      </div>
+      <div class="case-card reveal r3">
+        <p class="case-quote">The app is the first dashboard our whole crew actually opens every morning, not just the office.</p>
+        <div class="case-foot"><div class="case-avatar">RS</div><div><div class="case-name">Ravi Shankar</div><div class="case-role">Hatchery lead, Andhra Pradesh</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="pricing">
+  <div class="wrap">
+    <div class="tech-head reveal">
+      <span class="eyebrow section-tag">Plans</span>
+      <h2>Priced by pen, not by promise.</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card reveal r1">
+        <span class="price-tag">Starter</span>
+        <div class="price-num">$149</div><div class="price-unit">per pen / month</div>
+        <ul class="price-feats"><li>Up to 6 water sensors</li><li>Daily summary alerts</li><li>Farmer app access</li><li>Email support</li></ul>
+        <a href="contact.html" class="btn btn-dark" style="width:100%;justify-content:center;">Start here</a>
+      </div>
+      <div class="price-card featured reveal r2">
+        <span class="price-tag">Operational</span>
+        <div class="price-num">$389</div><div class="price-unit">per pen / month</div>
+        <ul class="price-feats"><li>Unlimited water sensors</li><li>Real-time alerts + auto-feed control</li><li>AI vision biomass tracking</li><li>Priority support</li></ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Most farms choose this</a>
+      </div>
+      <div class="price-card reveal r3">
+        <span class="price-tag">Enterprise</span>
+        <div class="price-num">Custom</div><div class="price-unit">multi-site pricing</div>
+        <ul class="price-feats"><li>Everything in Operational</li><li>Cross-site analytics</li><li>API access</li><li>Dedicated engineer</li></ul>
+        <a href="contact.html" class="btn btn-dark" style="width:100%;justify-content:center;">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="wrap">
+      <footer>
+        <div class="footer-brand">
+          <div class="logo"><img src="assets/image/pic1.webp" alt="Logo"></div>
+          <p>Sensing, feeding and vision hardware for working aquaculture farms — built for salt water, not showrooms.</p>
+          <div class="social-links">
+            <a href="404.html" aria-label="Facebook"><span class="social-icon social-facebook" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="Instagram"><span class="social-icon social-instagram" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="LinkedIn"><span class="social-icon social-linkedin" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="X"><span class="social-icon social-x" aria-hidden="true"></span></a>
+          </div>
+        </div>
+        <div><h5>Product</h5><ul><li><a href="technology.html">Technology</a></li><li><a href="products.html">Hardware</a></li><li><a href="technology.html">Live dashboard</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+        <div><h5>Company</h5><ul><li><a href="index.html">About</a></li><li><a href="pricing.html">Farms</a></li><li><a href="pricing.html">Impact</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Support</h5><ul><li><a href="#">Documentation</a></li><li><a href="#">Installation guide</a></li><li><a href="#">Status page</a></li></ul></div>
+      </footer>
+      <div class="foot-bottom mono">© 2026 DEEPCURRENT MARINE SYSTEMS · ALL DEPTHS COVERED</div>
+    </div>
+<script src="scripts.js" defer></script>
+</body>
+</html>

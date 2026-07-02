@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology — DeepCurrent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-technology">
+<div id="depth-gauge">
+  <div class="dg-readout"><span class="m" id="dg-meters">0m</span><span class="z" id="dg-zone">Surface</span></div>
+  <div class="dg-track"><div class="dg-fill" id="dg-fill"></div></div>
+</div>
+<header id="site-header">
+  <button class="site-menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="logo"><img src="assets/image/pic1.webp" alt="Logo"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="products.html">Hardware</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+  </nav>
+  <a href="contact.html" class="btn btn-ghost" style="padding:11px 20px;font-size:13.5px;">Book a demo</a>
+</header>
+<section id="hero">
+  <div class="bubbles" id="bubbles-hero"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow hero-eyebrow">Instrumented systems</span>
+      <h1 class="hero-title">Technology built for rugged fish farms.</h1>
+      <p class="hero-sub">From sensor buoys to analytics, the DeepCurrent stack keeps water, feed and stock health visible in real time.</p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary">Speak with our team</a>
+        <a href="products.html" class="btn btn-ghost">See hardware</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="mono">Farm feed · Site 04, Vũng Tàu bay</span>
+      <div style="margin-top:16px;">
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Dissolved oxygen</span><span class="val">7.2 mg/L</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Water temp</span><span class="val">26.4 °C</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Feed conversion</span><span class="val">1.18 FCR</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Active sensors</span><span class="val">312 / 312</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="tech">
+  <div class="wrap">
+    <div class="tech-head reveal">
+      <span class="eyebrow section-tag">The stack</span>
+      <h2>Four systems, one read-out.</h2>
+      <p class="lead">Each layer works standalone or together — hardware in the water, software on land.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card reveal r1"><div class="tech-ico">◉</div><h4>Water Sensors</h4><p class="tech-lbl">DO, pH, salinity, ammonia and temperature logged every 90 seconds from floating or submerged buoys.</p></div>
+      <div class="tech-card reveal r2"><div class="tech-ico">◈</div><h4>AI Vision</h4><p class="tech-lbl">Underwater cameras track biomass, feeding response and early signs of sea lice or disease.</p></div>
+      <div class="tech-card reveal r3"><div class="tech-ico">⟐</div><h4>Auto-Feed Control</h4><p class="tech-lbl">Feeders adjust pellet volume in real time based on appetite signals, cutting overfeeding.</p></div>
+      <div class="tech-card reveal r4"><div class="tech-ico">⌁</div><h4>Farmer App</h4><p class="tech-lbl">One app per site — alerts, trends and harvest planning, usable from a boat with patchy signal.</p></div>
+    </div>
+  </div>
+</section>
+<section id="flow">
+  <div class="wrap">
+    <div class="tech-head reveal">
+      <span class="eyebrow section-tag">How it connects</span>
+      <h2>From the water to your pocket in four steps.</h2>
+    </div>
+    <div class="flow-row">
+      <div class="flow-line"></div>
+      <div class="flow-step reveal r1"><div class="flow-node">01</div><h4>Sense</h4><p>Buoys and probes sample water and fish activity continuously.</p></div>
+      <div class="flow-step reveal r2"><div class="flow-node">02</div><h4>Transmit</h4><p>LoRa mesh network relays readings to a shoreline gateway, no SIM needed.</p></div>
+      <div class="flow-step reveal r3"><div class="flow-node">03</div><h4>Analyze</h4><p>Models flag anomalies against each site's own historical baseline.</p></div>
+      <div class="flow-step reveal r4"><div class="flow-node">04</div><h4>Act</h4><p>Farmer gets a plain-language alert, with a suggested action, in seconds.</p></div>
+    </div>
+  </div>
+</section>
+<section id="dashboard">
+  <div class="bubbles" id="bubbles-dash"></div>
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Live inside the app</span>
+      <h2 style="color:#fff;">The read-out a farmer actually checks.</h2>
+      <p class="lead" style="color:rgba(255,255,255,.65);">A simplified view of what streams from a single pen. Scroll into view to watch it come alive.</p>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dash-grid" id="gauge-grid">
+        <div class="gauge-card">
+          <svg viewBox="0 0 120 120"><circle class="gauge-track" cx="60" cy="60" r="52"/><circle class="gauge-fill" data-pct="82" cx="60" cy="60" r="52"/><text x="60" y="66" text-anchor="middle" class="gauge-val">7.2</text></svg>
+          <div class="gauge-name">Dissolved O₂</div><div class="gauge-range mono">mg/L · target 6.5–8</div>
+        </div>
+        <div class="gauge-card">
+          <svg viewBox="0 0 120 120"><circle class="gauge-track" cx="60" cy="60" r="52"/><circle class="gauge-fill" data-pct="65" cx="60" cy="60" r="52"/><text x="60" y="66" text-anchor="middle" class="gauge-val">26.4</text></svg>
+          <div class="gauge-name">Water Temp</div><div class="gauge-range mono">°C · target 24–28</div>
+        </div>
+        <div class="gauge-card">
+          <svg viewBox="0 0 120 120"><circle class="gauge-track" cx="60" cy="60" r="52"/><circle class="gauge-fill" data-pct="90" cx="60" cy="60" r="52"/><text x="60" y="66" text-anchor="middle" class="gauge-val">7.9</text></svg>
+          <div class="gauge-name">pH Level</div><div class="gauge-range mono">· target 7.5–8.3</div>
+        </div>
+        <div class="gauge-card">
+          <svg viewBox="0 0 120 120"><circle class="gauge-track" cx="60" cy="60" r="52"/><circle class="gauge-fill" data-pct="30" cx="60" cy="60" r="52"/><text x="60" y="66" text-anchor="middle" class="gauge-val">0.02</text></svg>
+          <div class="gauge-name">Ammonia</div><div class="gauge-range mono">mg/L · ceiling 0.05</div>
+        </div>
+      </div>
+      <div class="dash-foot">
+        <span class="mono">SITE 04 · VŨNG TÀU BAY · UPDATED 4S AGO</span>
+        <span class="mono" style="color:var(--aqua);">● ALL SYSTEMS NOMINAL</span>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="wrap">
+      <footer>
+        <div class="footer-brand">
+          <div class="logo"><img src="assets/image/pic1.webp" alt="Logo"></div>
+          <p>Sensing, feeding and vision hardware for working aquaculture farms — built for salt water, not showrooms.</p>
+          <div class="social-links">
+            <a href="404.html" aria-label="Facebook"><span class="social-icon social-facebook" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="Instagram"><span class="social-icon social-instagram" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="LinkedIn"><span class="social-icon social-linkedin" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="X"><span class="social-icon social-x" aria-hidden="true"></span></a>
+          </div>
+        </div>
+        <div><h5>Product</h5><ul><li><a href="technology.html">Technology</a></li><li><a href="products.html">Hardware</a></li><li><a href="technology.html">Live dashboard</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+        <div><h5>Company</h5><ul><li><a href="index.html">About</a></li><li><a href="pricing.html">Farms</a></li><li><a href="pricing.html">Impact</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Support</h5><ul><li><a href="#">Documentation</a></li><li><a href="#">Installation guide</a></li><li><a href="#">Status page</a></li></ul></div>
+      </footer>
+      <div class="foot-bottom mono">© 2026 DEEPCURRENT MARINE SYSTEMS · ALL DEPTHS COVERED</div>
+    </div>
+<script src="scripts.js" defer></script>
+</body>
+</html>

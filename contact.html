@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — DeepCurrent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-contact">
+<div id="depth-gauge">
+  <div class="dg-readout"><span class="m" id="dg-meters">0m</span><span class="z" id="dg-zone">Surface</span></div>
+  <div class="dg-track"><div class="dg-fill" id="dg-fill"></div></div>
+</div>
+<header id="site-header">
+  <button class="site-menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="logo"><img src="assets/image/pic1.webp" alt="Logo"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="products.html">Hardware</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+  </nav>
+  <a href="contact.html" class="btn btn-ghost" style="padding:11px 20px;font-size:13.5px;">Book a demo</a>
+</header>
+<section id="hero">
+  <div class="bubbles" id="bubbles-hero"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow hero-eyebrow">Get in touch</span>
+      <h1 class="hero-title">Questions? We’re here to help.</h1>
+      <p class="hero-sub">Schedule a walkthrough, ask about deployment, or learn how our service fits your farm.</p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary">Contact us</a>
+        <a href="technology.html" class="btn btn-ghost">See the dashboard</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="mono">Farm feed · Site 04, Vũng Tàu bay</span>
+      <div style="margin-top:16px;">
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Dissolved oxygen</span><span class="val">7.2 mg/L</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Water temp</span><span class="val">26.4 °C</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Feed conversion</span><span class="val">1.18 FCR</span></div>
+        <div class="live-row"><span class="lbl"><span class="pulse-dot"></span>Active sensors</span><span class="val">312 / 312</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact-options">
+  <div class="wrap">
+    <div class="tech-head reveal">
+      <span class="eyebrow section-tag">Start the conversation</span>
+      <h2>Pick the path that matches your farm.</h2>
+      <p class="lead">Whether you are comparing options, planning a pilot or supporting deployed hardware, we route the request to the right team.</p>
+    </div>
+    <div class="contact-strip">
+      <div class="contact-chip reveal r1"><span class="mono">Sales</span><strong>Plan a pilot</strong><p>Share pen count, species and location so we can size a starter setup.</p></div>
+      <div class="contact-chip reveal r2"><span class="mono">Technical</span><strong>Talk deployment</strong><p>Review gateway placement, power needs, sensor mix and install timing.</p></div>
+      <div class="contact-chip reveal r3"><span class="mono">Support</span><strong>Existing farm</strong><p>Get help with alerts, devices, app access or a service visit.</p></div>
+    </div>
+  </div>
+</section>
+<section id="deployment">
+  <div class="wrap">
+    <div class="tech-head reveal">
+      <span class="eyebrow section-tag">What happens next</span>
+      <h2>A simple route from message to water.</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card reveal r1"><span class="mono">01</span><h4>Farm review</h4><p>We look at species, water type, site layout and the problems you most want to catch early.</p></div>
+      <div class="info-card reveal r2"><span class="mono">02</span><h4>Kit proposal</h4><p>You get a practical device plan with sensor counts, gateway locations and monthly pricing.</p></div>
+      <div class="info-card reveal r3"><span class="mono">03</span><h4>Install window</h4><p>Once approved, we schedule shipping, remote setup and the first live data check.</p></div>
+    </div>
+  </div>
+</section>
+<section id="support">
+  <div class="wrap split-grid">
+    <div class="reveal">
+      <span class="eyebrow section-tag">Support coverage</span>
+      <h2>Built for crews that cannot wait on vague tickets.</h2>
+      <p class="lead">Support is organized around farm urgency: water alerts first, app access next, routine questions after the site is stable.</p>
+    </div>
+    <div class="spec-list reveal r2">
+      <div class="spec-row"><span>Urgent water alert</span><span>15 min response</span></div>
+      <div class="spec-row"><span>Device offline</span><span>Same business day</span></div>
+      <div class="spec-row"><span>App access</span><span>2 hour response</span></div>
+      <div class="spec-row"><span>Service visit</span><span>Scheduled by site</span></div>
+    </div>
+  </div>
+</section>
+<section id="cta">
+  <div class="bubbles" id="bubbles-cta"></div>
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--aqua);">Ready when you are</span>
+    <h2>Put sensors in the water this season.</h2>
+    <p class="lead">Tell us your species, site size and pen count — we'll size a starter kit and get it shipped.</p>
+    <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Request received ✓';">
+      <input type="email" placeholder="you@yourfarm.com" required>
+      <button type="submit" class="btn btn-primary">Request a kit</button>
+    </form>
+    <div class="wrap">
+      <footer>
+        <div class="footer-brand">
+          <div class="logo"><img src="assets/image/pic1.webp" alt="Logo"></div>
+          <p>Sensing, feeding and vision hardware for working aquaculture farms — built for salt water, not showrooms.</p>
+          <div class="social-links">
+            <a href="404.html" aria-label="Facebook"><span class="social-icon social-facebook" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="Instagram"><span class="social-icon social-instagram" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="LinkedIn"><span class="social-icon social-linkedin" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="X"><span class="social-icon social-x" aria-hidden="true"></span></a>
+          </div>
+        </div>
+        <div><h5>Product</h5><ul><li><a href="technology.html">Technology</a></li><li><a href="products.html">Hardware</a></li><li><a href="technology.html">Live dashboard</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+        <div><h5>Company</h5><ul><li><a href="index.html">About</a></li><li><a href="pricing.html">Farms</a></li><li><a href="pricing.html">Impact</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Support</h5><ul><li><a href="#">Documentation</a></li><li><a href="#">Installation guide</a></li><li><a href="#">Status page</a></li></ul></div>
+      </footer>
+      <div class="foot-bottom mono">© 2026 DEEPCURRENT MARINE SYSTEMS · ALL DEPTHS COVERED</div>
+    </div>
+  </div>
+</section>
+<script src="scripts.js" defer></script>
+</body>
+</html>

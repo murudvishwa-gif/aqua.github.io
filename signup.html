@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — DeepCurrent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-signup">
+<div id="depth-gauge">
+  <div class="dg-readout"><span class="m" id="dg-meters">0m</span><span class="z" id="dg-zone">Surface</span></div>
+  <div class="dg-track"><div class="dg-fill" id="dg-fill"></div></div>
+</div>
+<header id="site-header">
+  <button class="site-menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="logo"><img src="assets/image/pic1.webp" alt="Logo"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="technology.html">Technology</a></li>
+      <li><a href="products.html">Hardware</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+  </nav>
+  <a href="contact.html" class="btn btn-ghost" style="padding:11px 20px;font-size:13.5px;">Book a demo</a>
+</header>
+<section id="hero">
+  <div class="bubbles" id="bubbles-hero"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow hero-eyebrow">Start your farm trial</span>
+      <h1 class="hero-title">Create your DeepCurrent account.</h1>
+      <p class="hero-sub">Register your site, connect your systems, and start receiving live alerts in minutes.</p>
+      <div class="hero-cta">
+        <a href="login.html" class="btn btn-primary">Already have an account</a>
+        <a href="contact.html" class="btn btn-ghost">Contact sales</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="mono">New farm onboarding</span>
+      <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Creating account…';">
+        <input type="text" placeholder="Full name" required>
+        <input type="email" placeholder="you@yourfarm.com" required>
+        <input type="password" placeholder="Create password" required>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Sign up</button>
+      </form>
+    </div>
+  </div>
+</section>
+  <div class="wrap">
+      <footer>
+        <div class="footer-brand">
+          <div class="logo"><img src="assets/image/pic1.webp" alt="Logo"></div>
+          <p>Sensing, feeding and vision hardware for working aquaculture farms — built for salt water, not showrooms.</p>
+          <div class="social-links">
+            <a href="404.html" aria-label="Facebook"><span class="social-icon social-facebook" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="Instagram"><span class="social-icon social-instagram" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="LinkedIn"><span class="social-icon social-linkedin" aria-hidden="true"></span></a>
+            <a href="404.html" aria-label="X"><span class="social-icon social-x" aria-hidden="true"></span></a>
+          </div>
+        </div>
+        <div><h5>Product</h5><ul><li><a href="technology.html">Technology</a></li><li><a href="products.html">Hardware</a></li><li><a href="technology.html">Live dashboard</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+        <div><h5>Company</h5><ul><li><a href="index.html">About</a></li><li><a href="pricing.html">Farms</a></li><li><a href="pricing.html">Impact</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h5>Support</h5><ul><li><a href="#">Documentation</a></li><li><a href="#">Installation guide</a></li><li><a href="#">Status page</a></li></ul></div>
+      </footer>
+      <div class="foot-bottom mono">© 2026 DEEPCURRENT MARINE SYSTEMS · ALL DEPTHS COVERED</div>
+    </div>
+<script src="scripts.js" defer></script>
+</body>
+</html>

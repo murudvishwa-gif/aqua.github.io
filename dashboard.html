@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | AgriNova</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-dashboard">
+<header id="site-header" class="scrolled dashboard-header">
+  <button class="dashboard-menu-btn" type="button" aria-label="Toggle dashboard menu" aria-expanded="false" aria-controls="dashboard-nav">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="logo dashboard-logo-home" href="#home" aria-label="Dashboard home"><img src="assets/image/pic1.webp" alt="Logo"></a>
+  <nav id="dashboard-nav" class="dashboard-nav">
+    <div class="dashboard-sidebar-user">
+      <span class="dashboard-user-avatar" data-dashboard-initials>VP</span>
+      <div>
+        <strong data-dashboard-user>Vishwa Patel</strong>
+        <span>Site 04 Farm</span>
+      </div>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#dashboard">Overview</a></li>
+      <li><a href="#water">Water Usage</a></li>
+      <li><a href="#alerts">Alerts</a></li>
+      <li><a href="#devices">Devices</a></li>
+      <li><a href="#feed-log">Crops & Yield</a></li>
+      <li><a href="#maintenance">Maintenance</a></li>
+      <li><a href="#reports">Reports</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a class="dashboard-logout-link" href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+  <div class="dashboard-actions">
+    <a class="dashboard-icon-btn notification-btn" href="#alerts" aria-label="Notifications">
+      <span class="notification-mark">2</span>
+    </a>
+    <a class="dashboard-icon-btn profile-btn" href="#profile" aria-label="Profile" data-dashboard-initials>VP</a>
+  </div>
+</header>
+<section id="home" class="dashboard-shell dashboard-panel active">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Dashboard home</span>
+      <h2 style="color:#fff;">Welcome back, <span data-dashboard-user>Vishwa Patel</span></h2>
+      <p class="lead" style="color:rgba(255,255,255,.65);">Check the farm summary, review urgent alerts, and open the section you need from one clean home screen.</p>
+      <span class="dashboard-weather">Sunny - 29 deg C - Light breeze</span>
+    </div>
+    <div class="dashboard-kpis dashboard-home-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">Priority today</span><strong>3 tasks</strong><p>Water dry blocks, inspect pests, and update crop stock.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Farm status</span><strong>Good</strong><p>All main systems are online and ready.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Open alerts</span><strong>2</strong><p>Two items need review before evening.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Yield target</span><strong>92%</strong><p>Current crop progress is close to plan.</p></div>
+    </div>
+    <div class="dash-panel dashboard-home-panel reveal">
+      <div>
+        <span class="eyebrow">Quick actions</span>
+        <h3>Open a dashboard section</h3>
+        <p>Use these shortcuts or the fixed sidebar to change the visible dashboard content.</p>
+      </div>
+      <div class="dashboard-quick-actions">
+        <a href="#dashboard">Overview</a>
+        <a href="#water">Water Usage</a>
+        <a href="#alerts">Alerts</a>
+        <a href="#feed-log">Crops & Yield</a>
+        <a href="#profile">Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="dashboard" class="dashboard-shell dashboard-panel">
+  <div class="bubbles" id="bubbles-dash"></div>
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Dashboard display</span>
+      <h2 style="color:#fff;">Good morning, <span data-dashboard-user>Vishwa Patel</span></h2>
+      <p class="lead" style="color:rgba(255,255,255,.65);">Greenfield Farm is ready for today's crop work, irrigation checks, and market review.</p>
+      <span class="dashboard-weather">Sunny - 29 deg C - Light breeze</span>
+    </div>
+    <div class="dashboard-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">Today focus</span><strong>3 actions</strong><p>Inspect greenhouse pests, irrigate dry blocks, and confirm market prices.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Farm health</span><strong>82%</strong><p>Most fields are healthy with two watch zones.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Water plan</span><strong>18k L</strong><p>Planned usage for controlled irrigation today.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Next update</span><strong>2:00 PM</strong><p>Yield and stock data refresh after field tasks.</p></div>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dash-grid" id="gauge-grid">
+        <div class="gauge-card">
+          <svg viewBox="0 0 120 120"><circle class="gauge-track" cx="60" cy="60" r="52"/><circle class="gauge-fill" data-pct="82" cx="60" cy="60" r="52"/><text x="60" y="66" text-anchor="middle" class="gauge-val">7.2</text></svg>
+          <div class="gauge-name">Dissolved O2</div><div class="gauge-range mono">mg/L target 6.5-8</div>
+        </div>
+        <div class="gauge-card">
+          <svg viewBox="0 0 120 120"><circle class="gauge-track" cx="60" cy="60" r="52"/><circle class="gauge-fill" data-pct="65" cx="60" cy="60" r="52"/><text x="60" y="66" text-anchor="middle" class="gauge-val">26.4</text></svg>
+          <div class="gauge-name">Water Temp</div><div class="gauge-range mono">C target 24-28</div>
+        </div>
+        <div class="gauge-card">
+          <svg viewBox="0 0 120 120"><circle class="gauge-track" cx="60" cy="60" r="52"/><circle class="gauge-fill" data-pct="90" cx="60" cy="60" r="52"/><text x="60" y="66" text-anchor="middle" class="gauge-val">7.9</text></svg>
+          <div class="gauge-name">pH Level</div><div class="gauge-range mono">target 7.5-8.3</div>
+        </div>
+        <div class="gauge-card">
+          <svg viewBox="0 0 120 120"><circle class="gauge-track" cx="60" cy="60" r="52"/><circle class="gauge-fill" data-pct="30" cx="60" cy="60" r="52"/><text x="60" y="66" text-anchor="middle" class="gauge-val">0.02</text></svg>
+          <div class="gauge-name">Ammonia</div><div class="gauge-range mono">mg/L ceiling 0.05</div>
+        </div>
+      </div>
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>North pen oxygen trending low after feeding.</span><span>WATCH</span></div>
+        <div class="dashboard-alert"><span>Auto-feeder X2 completed morning ration.</span><span>OK</span></div>
+        <div class="dashboard-alert"><span>Camera UC-1 lens cleaning due this week.</span><span>SERVICE</span></div>
+      </div>
+      <div class="dash-foot">
+        <span class="mono">SITE 04 UPDATED 4S AGO</span>
+        <span class="mono" style="color:var(--aqua);">ALL SYSTEMS NOMINAL</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="water" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Water quality</span>
+      <h2 style="color:#fff;">Live chemistry by zone.</h2>
+    </div>
+    <div class="dashboard-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">North pen O2</span><strong>6.8</strong></div>
+      <div class="dashboard-kpi"><span class="mono">South pen pH</span><strong>7.9</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Canal temp</span><strong>26.4</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Ammonia avg</span><strong>0.02</strong></div>
+    </div>
+  </div>
+</section>
+<section id="alerts" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Alerts</span>
+      <h2 style="color:#fff;">Open farm actions.</h2>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>North pen oxygen trending low after feeding.</span><span>WATCH</span></div>
+        <div class="dashboard-alert"><span>Camera UC-1 lens cleaning due this week.</span><span>SERVICE</span></div>
+        <div class="dashboard-alert"><span>Gateway battery reserve below 40%.</span><span>CHECK</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="devices" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Devices</span>
+      <h2 style="color:#fff;">Connected hardware status.</h2>
+    </div>
+    <div class="dashboard-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">Buoys online</span><strong>48/48</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Feeders online</span><strong>12/12</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Cameras online</span><strong>08/09</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Gateways</span><strong>04/04</strong></div>
+    </div>
+  </div>
+</section>
+<section id="feed-log" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Feed log</span>
+      <h2 style="color:#fff;">Today’s feeding record.</h2>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>06:30 ration completed across all pens.</span><span>420 kg</span></div>
+        <div class="dashboard-alert"><span>11:45 appetite response above baseline.</span><span>+8%</span></div>
+        <div class="dashboard-alert"><span>16:00 ration adjusted for warm water.</span><span>-12 kg</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="maintenance" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Maintenance</span>
+      <h2 style="color:#fff;">Upcoming service tasks.</h2>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>Clean UC-1 camera lens on Pen 03.</span><span>Friday</span></div>
+        <div class="dashboard-alert"><span>Inspect solar panel mount on Gateway B.</span><span>Monday</span></div>
+        <div class="dashboard-alert"><span>Replace probe membrane on Buoy 17.</span><span>Next week</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="reports" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Reports</span>
+      <h2 style="color:#fff;">Cycle summaries ready to review.</h2>
+    </div>
+    <div class="dashboard-kpis reveal">
+      <div class="dashboard-kpi"><span class="mono">Weekly water</span><strong>Ready</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Feed variance</span><strong>-12%</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Device uptime</span><strong>99.4%</strong></div>
+      <div class="dashboard-kpi"><span class="mono">Harvest forecast</span><strong>18d</strong></div>
+    </div>
+  </div>
+</section>
+<section id="profile" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Profile</span>
+      <h2 style="color:#fff;">Operator profile.</h2>
+    </div>
+    <div class="dash-panel reveal">
+      <div class="dashboard-list">
+        <div class="dashboard-alert"><span>Name</span><span data-dashboard-user>Vishwa Patel</span></div>
+        <div class="dashboard-alert"><span>Role</span><span>Farm operator</span></div>
+        <div class="dashboard-alert"><span>Assigned site</span><span>Site 04</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="scripts.js" defer></script>
+</body>
+</html>
