@@ -28,9 +28,9 @@
     <div>
       <span class="eyebrow hero-eyebrow">404</span>
       <h1 class="hero-title">This channel is offline.</h1>
-      <p class="hero-sub">The social page is not connected yet. Head back to DeepCurrent and keep exploring the farm system.</p>
+      <p class="hero-sub">The social page is not connected yet. Go back to the page you were viewing and keep exploring the farm system.</p>
       <div class="hero-cta">
-        <a href="index.html" class="btn btn-primary">Back to home</a>
+        <button type="button" class="btn btn-primary" onclick="if(history.length > 1){ history.back(); } else { window.location.href='index.html'; }">Go back</button>
         <a href="contact.html" class="btn btn-ghost">Contact us</a>
       </div>
     </div>
@@ -39,7 +39,7 @@
       <div style="margin-top:16px;">
         <div class="live-row"><span class="lbl">Requested page</span><span class="val">404</span></div>
         <div class="live-row"><span class="lbl">Signal</span><span class="val">Not found</span></div>
-        <div class="live-row"><span class="lbl">Recovery</span><span class="val">Home route</span></div>
+        <div class="live-row"><span class="lbl">Recovery</span><span class="val">Previous page</span></div>
       </div>
     </div>
   </div>
