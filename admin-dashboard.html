@@ -31,8 +31,8 @@
       <li><a href="#admin-reports">Reports</a></li>
       <li><a href="#admin-support">Support</a></li>
       <li><a href="#admin-profile">Profile</a></li>
-      <li><a class="dashboard-logout-link" href="login.html">Logout</a></li>
     </ul>
+    <a class="dashboard-sidebar-logout dashboard-logout-link" href="#admin-logout">Logout</a>
   </nav>
   <div class="dashboard-actions">
     <a class="dashboard-icon-btn notification-btn" href="#admin-support" aria-label="Notifications">
@@ -68,6 +68,7 @@
         <a href="#admin-devices">Devices</a>
         <a href="#admin-support">Support</a>
         <a href="#admin-reports">Reports</a>
+        <a class="dashboard-logout-action" href="#admin-logout">Logout</a>
       </div>
     </div>
   </div>
@@ -160,7 +161,7 @@
       <div class="dashboard-list">
         <div class="dashboard-alert"><span>Loan guidance request from Delhi Office queue.</span><span>New</span></div>
         <div class="dashboard-alert"><span>Dashboard access issue for Mumbai Farm 12.</span><span>Urgent</span></div>
-        <div class="dashboard-alert"><span>Property visit booking needs assignment.</span><span>Assign</span></div>
+        <div class="dashboard-alert"><span>Site walkthrough request needs assignment.</span><span>Assign</span></div>
       </div>
     </div>
   </div>
@@ -178,6 +179,23 @@
         <div class="dashboard-alert"><span>Role</span><span data-dashboard-role>Admin</span></div>
         <div class="dashboard-alert"><span>Access</span><span>Full platform management</span></div>
       </div>
+    </div>
+  </div>
+</section>
+<section id="admin-logout" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Logout</span>
+      <h2>End this admin session.</h2>
+      <p class="lead">Use this section when your platform checks are complete and you want to return to the login screen.</p>
+    </div>
+    <div class="dash-panel dashboard-logout-panel reveal">
+      <div>
+        <span class="eyebrow">Session</span>
+        <h3>Ready to logout?</h3>
+        <p>You can sign back in anytime to manage users, farms, devices, reports, and support requests.</p>
+      </div>
+      <a class="dashboard-logout-button" href="login.html">Logout</a>
     </div>
   </div>
 </section>

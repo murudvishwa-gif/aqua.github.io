@@ -20,6 +20,43 @@ if(siteMenuBtn && header){
     });
   });
 }
+document.querySelectorAll('body:not(.page-dashboard) header .logo, footer .logo').forEach(logo => {
+  logo.setAttribute('role', 'link');
+  logo.setAttribute('tabindex', '0');
+  logo.setAttribute('aria-label', 'Go to home page');
+  const goHome = () => { window.location.href = 'index.html'; };
+  logo.addEventListener('click', goHome);
+  logo.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter' || event.key === ' '){
+      event.preventDefault();
+      goHome();
+    }
+  });
+});
+document.querySelectorAll('footer').forEach(footer => {
+  const companyTitle = Array.from(footer.querySelectorAll('h5')).find(title => title.textContent.trim().toLowerCase() === 'company');
+  const companyLinks = companyTitle ? companyTitle.parentElement.querySelectorAll('a') : [];
+  companyLinks.forEach(link => {
+    const label = link.textContent.trim().toLowerCase();
+    if(label === 'about') link.href = 'index.html#about';
+    if(label === 'impact') link.href = 'index.html#impact';
+  });
+});
+const activeNavByPage = {
+  'page-home': 'index.html',
+  'page-technology': 'technology.html',
+  'page-products': 'products.html',
+  'page-pricing': 'pricing.html',
+  'page-contact': 'contact.html'
+};
+const activeNavTarget = Object.keys(activeNavByPage).find(pageClass => document.body.classList.contains(pageClass));
+if(activeNavTarget && header){
+  header.querySelectorAll('nav a').forEach(link => {
+    const isActive = link.getAttribute('href') === activeNavByPage[activeNavTarget];
+    link.classList.toggle('active', isActive);
+    if(isActive) link.setAttribute('aria-current', 'page');
+  });
+}
 document.querySelectorAll('.page-login .hero-card form, .page-signup .hero-card form').forEach(form => {
   form.addEventListener('submit', () => {
     if(document.body.classList.contains('page-login') && !form.querySelector('input[type="password"]')) return;
@@ -48,7 +85,6 @@ if(dashboardMenuBtn && dashboardHeader){
   document.querySelectorAll('[data-dashboard-initials]').forEach(el => { el.textContent = initials; });
   document.querySelectorAll('[data-dashboard-role]').forEach(el => { el.textContent = localStorage.getItem('dashboardUserRole') || 'User'; });
   const dashboardPanels = document.querySelectorAll('.dashboard-panel');
-  const dashboardLinks = document.querySelectorAll('.dashboard-logo-home[href^="#"], .dashboard-nav a[href^="#"], .dashboard-actions a[href^="#"], .dashboard-panel a[href^="#"]');
   const showDashboardPanel = (id) => {
     dashboardPanels.forEach(panel => panel.classList.toggle('active', panel.id === id));
     document.querySelectorAll('.dashboard-nav a[href^="#"]').forEach(link => {
@@ -60,7 +96,8 @@ if(dashboardMenuBtn && dashboardHeader){
       activePanel.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
     }
   };
-  const startPanel = (location.hash || '#home').slice(1);
+  const fallbackPanel = document.body.classList.contains('page-admin-dashboard') ? 'admin-home' : 'home';
+  const startPanel = (location.hash || '#'+fallbackPanel).slice(1);
   if(document.getElementById(startPanel)) showDashboardPanel(startPanel);
   const setDashboardMenu = (isOpen) => {
     dashboardHeader.classList.toggle('menu-open', isOpen);
@@ -70,15 +107,16 @@ if(dashboardMenuBtn && dashboardHeader){
   dashboardMenuBtn.addEventListener('click', () => {
     setDashboardMenu(!dashboardHeader.classList.contains('menu-open'));
   });
-  dashboardLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-      const id = link.getAttribute('href').slice(1);
-      if(document.getElementById(id)){
-        event.preventDefault();
-        showDashboardPanel(id);
-      }
-      setDashboardMenu(false);
-    });
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('.dashboard-logo-home[href^="#"], .dashboard-nav a[href^="#"], .dashboard-actions a[href^="#"], .dashboard-panel a[href^="#"]');
+    if(!link) return;
+    const id = link.getAttribute('href').slice(1);
+    if(document.getElementById(id)){
+      event.preventDefault();
+      showDashboardPanel(id);
+      history.replaceState(null, '', '#'+id);
+    }
+    setDashboardMenu(false);
   });
   window.addEventListener('keydown', (event) => {
     if(event.key === 'Escape') setDashboardMenu(false);

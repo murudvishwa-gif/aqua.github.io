@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard | AgriNova</title>
+<title>Dashboard | DeepCurrent</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -25,15 +25,15 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#dashboard">Overview</a></li>
-      <li><a href="#water">Water Usage</a></li>
+      <li><a href="#water">Water Quality</a></li>
       <li><a href="#alerts">Alerts</a></li>
       <li><a href="#devices">Devices</a></li>
-      <li><a href="#feed-log">Crops & Yield</a></li>
+      <li><a href="#feed-log">Feed Log</a></li>
       <li><a href="#maintenance">Maintenance</a></li>
       <li><a href="#reports">Reports</a></li>
       <li><a href="#profile">Profile</a></li>
-      <li><a class="dashboard-logout-link" href="login.html">Logout</a></li>
     </ul>
+    <a class="dashboard-sidebar-logout dashboard-logout-link" href="#logout">Logout</a>
   </nav>
   <div class="dashboard-actions">
     <a class="dashboard-icon-btn notification-btn" href="#alerts" aria-label="Notifications">
@@ -47,14 +47,14 @@
     <div class="dash-head reveal">
       <span class="eyebrow">Dashboard home</span>
       <h2 style="color:#fff;">Welcome back, <span data-dashboard-user>Vishwa Patel</span></h2>
-      <p class="lead" style="color:rgba(255,255,255,.65);">Check the farm summary, review urgent alerts, and open the section you need from one clean home screen.</p>
-      <span class="dashboard-weather">Sunny - 29 deg C - Light breeze</span>
+      <p class="lead" style="color:rgba(255,255,255,.65);">Check the aquaculture site summary, review urgent alerts, and open the section you need from one clean home screen.</p>
+      <span class="dashboard-weather">Bay calm - 29 deg C - Light breeze</span>
     </div>
     <div class="dashboard-kpis dashboard-home-kpis reveal">
-      <div class="dashboard-kpi"><span class="mono">Priority today</span><strong>3 tasks</strong><p>Water dry blocks, inspect pests, and update crop stock.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Priority today</span><strong>3 tasks</strong><p>Review oxygen trend, clean one camera lens, and confirm feeder ration.</p></div>
       <div class="dashboard-kpi"><span class="mono">Farm status</span><strong>Good</strong><p>All main systems are online and ready.</p></div>
       <div class="dashboard-kpi"><span class="mono">Open alerts</span><strong>2</strong><p>Two items need review before evening.</p></div>
-      <div class="dashboard-kpi"><span class="mono">Yield target</span><strong>92%</strong><p>Current crop progress is close to plan.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Harvest target</span><strong>92%</strong><p>Current biomass progress is close to plan.</p></div>
     </div>
     <div class="dash-panel dashboard-home-panel reveal">
       <div>
@@ -64,10 +64,11 @@
       </div>
       <div class="dashboard-quick-actions">
         <a href="#dashboard">Overview</a>
-        <a href="#water">Water Usage</a>
+        <a href="#water">Water Quality</a>
         <a href="#alerts">Alerts</a>
-        <a href="#feed-log">Crops & Yield</a>
+        <a href="#feed-log">Feed Log</a>
         <a href="#profile">Profile</a>
+        <a class="dashboard-logout-action" href="#logout">Logout</a>
       </div>
     </div>
   </div>
@@ -78,14 +79,14 @@
     <div class="dash-head reveal">
       <span class="eyebrow">Dashboard display</span>
       <h2 style="color:#fff;">Good morning, <span data-dashboard-user>Vishwa Patel</span></h2>
-      <p class="lead" style="color:rgba(255,255,255,.65);">Greenfield Farm is ready for today's crop work, irrigation checks, and market review.</p>
-      <span class="dashboard-weather">Sunny - 29 deg C - Light breeze</span>
+      <p class="lead" style="color:rgba(255,255,255,.65);">Site 04 is ready for today's water checks, feed review, and harvest planning.</p>
+      <span class="dashboard-weather">Bay calm - 29 deg C - Light breeze</span>
     </div>
     <div class="dashboard-kpis reveal">
-      <div class="dashboard-kpi"><span class="mono">Today focus</span><strong>3 actions</strong><p>Inspect greenhouse pests, irrigate dry blocks, and confirm market prices.</p></div>
-      <div class="dashboard-kpi"><span class="mono">Farm health</span><strong>82%</strong><p>Most fields are healthy with two watch zones.</p></div>
-      <div class="dashboard-kpi"><span class="mono">Water plan</span><strong>18k L</strong><p>Planned usage for controlled irrigation today.</p></div>
-      <div class="dashboard-kpi"><span class="mono">Next update</span><strong>2:00 PM</strong><p>Yield and stock data refresh after field tasks.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Today focus</span><strong>3 actions</strong><p>Review oxygen trend, inspect camera visibility, and confirm feeder response.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Site health</span><strong>82%</strong><p>Most pens are healthy with two watch zones.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Feed plan</span><strong>420 kg</strong><p>Planned ration for controlled feeding today.</p></div>
+      <div class="dashboard-kpi"><span class="mono">Next update</span><strong>2:00 PM</strong><p>Biomass and stock data refresh after site tasks.</p></div>
     </div>
     <div class="dash-panel reveal">
       <div class="dash-grid" id="gauge-grid">
@@ -217,6 +218,23 @@
         <div class="dashboard-alert"><span>Role</span><span>Farm operator</span></div>
         <div class="dashboard-alert"><span>Assigned site</span><span>Site 04</span></div>
       </div>
+    </div>
+  </div>
+</section>
+<section id="logout" class="dashboard-section dashboard-panel">
+  <div class="wrap">
+    <div class="dash-head reveal">
+      <span class="eyebrow">Logout</span>
+      <h2 style="color:#fff;">End this dashboard session.</h2>
+      <p class="lead" style="color:rgba(255,255,255,.65);">Use this section when you are done reviewing the farm status and want to return to the login screen.</p>
+    </div>
+    <div class="dash-panel dashboard-logout-panel reveal">
+      <div>
+        <span class="eyebrow">Session</span>
+        <h3>Ready to logout?</h3>
+        <p>You can sign back in anytime to continue monitoring Site 04.</p>
+      </div>
+      <a class="dashboard-logout-button" href="login.html">Logout</a>
     </div>
   </div>
 </section>
