@@ -1892,11 +1892,25 @@ body.site-menu-open{
     top:calc(var(--dash-header-h) + 22px) !important;
     width:var(--dash-sidebar-w) !important;
     height:auto !important;
-    max-height:none !important;
+    max-height:calc(100vh - var(--dash-header-h) - 44px) !important;
     padding:14px !important;
-    overflow:visible !important;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
     display:block !important;
     z-index:40 !important;
+    scrollbar-width:thin !important;
+    scrollbar-color:rgba(97,239,242,.45) rgba(255,255,255,.06) !important;
+  }
+  .page-dashboard .dashboard-nav::-webkit-scrollbar{
+    width:8px !important;
+  }
+  .page-dashboard .dashboard-nav::-webkit-scrollbar-track{
+    background:rgba(255,255,255,.06) !important;
+    border-radius:10px !important;
+  }
+  .page-dashboard .dashboard-nav::-webkit-scrollbar-thumb{
+    background:rgba(97,239,242,.45) !important;
+    border-radius:10px !important;
   }
   .page-dashboard .dashboard-sidebar-user{
     padding:12px !important;
