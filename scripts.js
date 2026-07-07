@@ -99,6 +99,11 @@ if(dashboardMenuBtn && dashboardHeader){
   const fallbackPanel = document.body.classList.contains('page-admin-dashboard') ? 'admin-home' : 'home';
   const startPanel = (location.hash || '#'+fallbackPanel).slice(1);
   if(document.getElementById(startPanel)) showDashboardPanel(startPanel);
+  window.addEventListener('hashchange', () => {
+    const id = (location.hash || '#'+fallbackPanel).slice(1);
+    if(document.getElementById(id)) showDashboardPanel(id);
+    setDashboardMenu(false);
+  });
   const setDashboardMenu = (isOpen) => {
     dashboardHeader.classList.toggle('menu-open', isOpen);
     document.body.classList.toggle('dashboard-menu-open', isOpen);
