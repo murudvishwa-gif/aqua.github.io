@@ -343,11 +343,16 @@ h2{font-size:clamp(28px,3.6vw,42px);font-weight:700;color:var(--ink);margin:14px
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(255,255,255,.09);
 }
+.page-contact .contact-hero{
+  min-height:78vh;
+  background:
+    linear-gradient(180deg, rgba(4,20,28,.28) 0%, rgba(5,26,36,.66) 55%, #07131f 100%),
+    var(--hero-image) center/cover no-repeat;
+}
 .page-contact #contact-console{
-  min-height:100vh;
   display:flex;
   align-items:center;
-  padding:168px 0 72px;
+  padding:96px 0 72px;
   background:
     radial-gradient(circle at 62% 0%, rgba(255,107,74,.13), transparent 26%),
     linear-gradient(180deg, #07131f 0%, #05111d 100%);
@@ -442,8 +447,11 @@ h2{font-size:clamp(28px,3.6vw,42px);font-weight:700;color:var(--ink);margin:14px
   margin:0;
 }
 @media (max-width:900px){
+  .page-contact .contact-hero{
+    min-height:auto;
+  }
   .page-contact #contact-console{
-    padding:112px 0 42px;
+    padding:72px 0 42px;
   }
   .contact-console-grid{
     grid-template-columns:1fr;
